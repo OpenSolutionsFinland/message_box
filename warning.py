@@ -15,7 +15,7 @@ class warning(osv.osv_memory):
         @return: view id, or False if no view found
         """
         res = self.pool.get('ir.model.data').get_object_reference(cr, uid, 
-            'osc_integ', 'warning_form')
+            'message_box', 'warning_form')
         return res and res[1] or False
 
     def message(self, cr, uid, id, context):

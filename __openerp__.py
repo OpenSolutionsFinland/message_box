@@ -31,7 +31,7 @@ return self.pool.get('warning').info(cr, uid, title='Export information', messag
 ***********************************
     """,
     "website" : "http://www.opensolutions.fi",
-    "depends" : ["base","mrp"],
+    "depends" : ["base"],
     "category" : "General",
     "init_xml" : [],
     "demo_xml" : [],
