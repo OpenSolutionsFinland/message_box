@@ -4,7 +4,11 @@ from openerp.tools.translate import _
 
 WARNING_TYPES = [('warning','Warning'),('info','Information'),('error','Error')]
 
-class warning(osv.osv_memory): _name = 'warning' _description = 'warning' _columns = { 'type': fields.selection(WARNING_TYPES, string='Type', readonly=True), 'title': fields.char(string="Title", size=100, readonly=True), 'message': fields.text(string="Message", readonly=True), } _req_name = 'title'
+class warning(osv.osv_memory): 
+    _name = 'warning' 
+    _description = 'warning' 
+    _columns = { 'type': fields.selection(WARNING_TYPES, string='Type', readonly=True), 'title': fields.char(string="Title", size=100, readonly=True), 'message': fields.text(string="Message", readonly=True), } 
+    _req_name = 'title'
 
     def _get_view_id(self, cr, uid):
         """Get the view id
